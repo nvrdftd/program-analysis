@@ -1,0 +1,12 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x5628e27e54a0 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %N = alloca i32, align 4\l  %a = alloca i32, align 4\l  %b = alloca i32, align 4\l  %x = alloca i32, align 4\l  %y = alloca i32, align 4\l  %z = alloca i32, align 4\l  %i = alloca i32, align 4\l  store i32 0, i32* %1\l  store i32 0, i32* %z, align 4\l  store i32 0, i32* %i, align 4\l  br label %2\l}"];
+	Node0x5628e27e54a0 -> Node0x5628e27cee30;
+	Node0x5628e27cee30 [shape=record,label="{%2:\l\l  %3 = load i32* %i, align 4\l  %4 = load i32* %N, align 4\l  %5 = icmp slt i32 %3, %4\l  br i1 %5, label %6, label %25\l|{<s0>T|<s1>F}}"];
+	Node0x5628e27cee30:s0 -> Node0x5628e27cef10;
+	Node0x5628e27cee30:s1 -> Node0x5628e27de3f0;
+	Node0x5628e27cef10 [shape=record,label="{%6:\l\l  %7 = load i32* %x, align 4\l  %8 = load i32* %y, align 4\l  %9 = mul nsw i32 2, %8\l  %10 = mul nsw i32 %9, 3\l  %11 = load i32* %z, align 4\l  %12 = mul nsw i32 %10, %11\l  %13 = add nsw i32 %7, %12\l  %14 = srem i32 %13, 3\l  %15 = sub nsw i32 0, %14\l  store i32 %15, i32* %x, align 4\l  %16 = load i32* %z, align 4\l  %17 = mul nsw i32 3, %16\l  %18 = load i32* %y, align 4\l  %19 = mul nsw i32 2, %18\l  %20 = add nsw i32 %17, %19\l  %21 = load i32* %x, align 4\l  %22 = srem i32 %20, %21\l  store i32 %22, i32* %y, align 4\l  %23 = load i32* %z, align 4\l  %24 = add nsw i32 %23, 1\l  store i32 %24, i32* %z, align 4\l  br label %2\l}"];
+	Node0x5628e27cef10 -> Node0x5628e27cee30;
+	Node0x5628e27de3f0 [shape=record,label="{%25:\l\l  ret i32 0\l}"];
+}
